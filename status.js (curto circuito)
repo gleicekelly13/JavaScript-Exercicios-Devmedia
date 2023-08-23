@@ -1,0 +1,9 @@
+let status = true;
+let resultado = status && "Aprovado";
+
+console.log(resultado); 
+
+/*let disponivel = true;
+let resultado = disponivel && "Produto disponível";
+
+console.log(resultado); */
