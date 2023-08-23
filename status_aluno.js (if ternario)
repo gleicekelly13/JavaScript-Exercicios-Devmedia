@@ -1,0 +1,11 @@
+var nota = 6;
+
+var status = nota > 7 ? "Aprovado" : "Reprovado";
+
+console.log(status); 
+
+/*var mes = 11;
+
+var mensagem = (mes == 11 || mes == 12) ? "Promoção" : "Preço normal";
+
+console.log(mensagem); */
