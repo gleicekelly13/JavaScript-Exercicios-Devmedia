@@ -71,9 +71,11 @@ switch(escolha){
             let anoSalario = salarioMinimo[i].ano;
             let salario_minimo = salarioMinimo[i].salario;
             let salarioIpca = inflacao_ano[i].ipca;
+            let crescimento = 0;
 
+            let iAnterior;
 
-            let salarioAnterior = salarioMinimo[i - 1].salario;
+            let salarioAnterior = salarioMinimo[iAnterior].salario;
             let diferenca = salario_minimo - salarioAnterior;
             let crescimento = (diferenca / salarioAnterior) * 100;
                 
