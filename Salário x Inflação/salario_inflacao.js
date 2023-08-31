@@ -80,17 +80,26 @@ switch(escolha){
 
             let iAnterior;
 
-            
-            let salarioAnterior = salarioMinimo[iAnterior].salario;
-            let diferenca = salario_minimo - salarioAnterior;
-            let crescimento = (diferenca / salarioAnterior) * 100;
-                
-            
+            if(i == 0) {
+                iAnterior = 0;
 
-            console.log("\nAno: " + anoSalario);
-            console.log("Salário mínimo: " + salario_minimo);
-            console.log("Crescimento Salarial: - " + crescimento.toFixed(2));
-            console.log("Inflação IPCA: " + salarioIpca);
+                console.log(label_anoSalario.padEnd(28, ".") + anoSalario);
+                console.log(label_salario_minimo.padEnd(27, ".") + "$ " + salario_minimo.toFixed(2).replace(".",","));
+                console.log(label_crescimento.padEnd(27, ".") + "-");
+                console.log(label_salarioIpca.padEnd(27, ".") + salarioIpca.toString().replace(".",",") + "%");
+            } else {
+                iAnterior = i - 1;
+
+                let salarioAnterior = salarioMinimo[iAnterior].salario;
+                let diferenca = salario_minimo - salarioAnterior;
+                let crescimento = (diferenca / salarioAnterior) * 100;
+                
+                console.log(label_anoSalario.padEnd(28, ".") + anoSalario);
+                console.log(label_salario_minimo.padEnd(27, ".") + "$ " + salario_minimo.toFixed(2).replace(".",","));
+                console.log(label_crescimento.padEnd(27, ".") + crescimento.toFixed(2).replace(".",",") + "%");
+                console.log(label_salarioIpca.padEnd(27, ".") + salarioIpca.toString().replace(".",",") + "%");
+            }
+            
         }
     break;
     default:
