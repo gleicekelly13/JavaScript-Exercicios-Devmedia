@@ -1,5 +1,5 @@
 import entradaDados from 'readline-sync';
-
+//Implementação das coleções de dados
 let salarioMinimo = [
     {ano: 2010, salario: 510.00},
     {ano: 2011, salario: 545.00},
@@ -28,31 +28,32 @@ let inflacao_ano = [
     {ano: 2020, ipca: 4.52}
 ];
 
+//Menu da aplicação
 console.log("Escolha uma das alternativas: ");
 console.log("1 - Listar os salários mínimos de 2010 à 2020");
 console.log("2 - Listar o índice IPCA de 2010 à 2020");
 console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
 
-let escolha = entradaDados.question('\nDigite o numero da sua escolha: ');
+let escolha = entradaDados.question('\nDigite o numero da sua escolha: '); //Esta mensagem ajuda a testar se o código está correspondendo a escolha feita.(input de escolha)
 
 escolha = parseInt(escolha);
-
+//Estrutura condicional
 switch(escolha){
-    case 1:
-        for(let salario_ano of salarioMinimo){
-
-            let ano = salario_ano.ano;
-            let salario = salario_ano.salario;
+    case 1: //Listagem dos salários
+        for(let salario_ano of salarioMinimo){ //Estrutura de repetição que acessa todos os dados do array.
+            //Os dados do array são acessados e colocados em variáveis
+            let ano = salario_ano.ano; //variável armazena ano
+            let salario = salario_ano.salario; //variável armazena salário
             
             let label_ano = "\nAno: ";
             let label_salario = "Salário mínimo: ";
-
-            console.log(label_ano.padEnd(26, '.') + ano);
+            //O console.log precisa estar dentro da estrutura de repetição para que todos os dados sejam exibidos
+            console.log(label_ano.padEnd(26, '.') + ano); //Formatação e alinhamento da lista de salários
             console.log(label_salario.padEnd(25, '.') + "$ " + salario.toFixed(2).replace(".",","));
             
         }
     break;
-    case 2:
+    case 2: //Estrutura de repetição para acessar os dados do array, os mesmos passos usados no case 1.
         for(let inflacao of inflacao_ano) {
             
             let anoInflacao = inflacao.ano;
@@ -65,34 +66,37 @@ switch(escolha){
             console.log(labelIpca.padEnd(25, ".") + ipcaInflacao.toFixed(2).replace(".",",") + "%");
         }
     break;
-    case 3:
-        for(let i = 1; i < salarioMinimo.length; i++) {
-
+    case 3: //Código de listagem dos anos,salários e inflações
+        for(let i = 1; i < salarioMinimo.length; i++) { //Estrutura de repetição que acessa todos os dados das duas coleções
+            
+            //Os dados são acessados e colocados em variáveis
             let anoSalario = salarioMinimo[i].ano;
             let salario_minimo = salarioMinimo[i].salario;
             let salarioIpca = inflacao_ano[i].ipca;
             let crescimento = 0;
-
+            
+            //Variáveis utilizadas para fazer a formatação dos textos
             let label_anoSalario = "\nAno: ";
             let label_salario_minimo = "Salário mínimo: ";
             let label_crescimento = "Crescimento Salarial: ";
             let label_salarioIpca = "Inflação IPCA: ";
 
-            let iAnterior;
+            let iAnterior; //variável que recebe o i(contador) anterior
 
-            if(i == 0) {
-                iAnterior = 0;
+            if(i == 0) { //Quando a posição for 0...
+                iAnterior = 0; //...A variável recebe 0
 
                 console.log(label_anoSalario.padEnd(28, ".") + anoSalario);
                 console.log(label_salario_minimo.padEnd(27, ".") + "$ " + salario_minimo.toFixed(2).replace(".",","));
                 console.log(label_crescimento.padEnd(27, ".") + "-");
                 console.log(label_salarioIpca.padEnd(27, ".") + salarioIpca.toString().replace(".",",") + "%");
             } else {
-                iAnterior = i - 1;
+                iAnterior = i - 1; // ...senão, recebe sempre o i anterior
 
+                //Utilizando os dados das variáveis para fazer o cálculo de crescimento salarial
                 let salarioAnterior = salarioMinimo[iAnterior].salario;
-                let diferenca = salario_minimo - salarioAnterior;
-                let crescimento = (diferenca / salarioAnterior) * 100;
+                let diferenca = salario_minimo - salarioAnterior; // Diferença entre o salário e o salário do ano anterior
+                let crescimento = (diferenca / salarioAnterior) * 100; //Cálculo do percentual de crescimento
                 
                 console.log(label_anoSalario.padEnd(28, ".") + anoSalario);
                 console.log(label_salario_minimo.padEnd(27, ".") + "$ " + salario_minimo.toFixed(2).replace(".",","));
@@ -102,7 +106,7 @@ switch(escolha){
             
         }
     break;
-    default:
+    default: //Validação de opções inválidas
         console.log("\nOpção Inválida");
 }
 
