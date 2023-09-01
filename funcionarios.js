@@ -7,7 +7,7 @@ let funcionarios = [
 ];
 
 let contador = 0;
-let encontrouHabilitado = false;
+let encontrouHabilitado = false; //variável booleana para indicar se um funcionário habilitado foi encontrado
 
 while(contador < funcionarios.length) {
 
@@ -22,7 +22,7 @@ while(contador < funcionarios.length) {
 
     contador++;
 }
-
+//Caso o valor da variável seja falso, a mensagem informará que nenhum usuário foi encontrado.
 if(!encontrouHabilitado) {
     console.log("Nenhum funcionário habilitado encontrado");
 }
