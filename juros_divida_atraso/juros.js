@@ -11,11 +11,12 @@ if(valor_divida > 0)
         console.log("\nVocê está em dias!");
     }
 
-    else if(dias_atraso <= 15)
+    else if(dias_atraso <= 15) //Estrutura condicional responsável por definir a taxa de juros dinamicamente
     {
-        let juros = (valor_divida / 100) * 5;
-        let valor_total_juros = Number(valor_divida) + Number(juros);
+        let juros = (valor_divida / 100) * 5; //Cáculo de juros com taxa de 5%
+        let valor_total_juros = Number(valor_divida) + Number(juros); //Valor total da dívida com os juros
 
+        //Saída de dados
         console.log("\nValor original da dívida: " + valor_divida)
         console.log("Dias atrasados: " + dias_atraso);
         console.log("Taxa de juros: 5% ");
@@ -24,8 +25,8 @@ if(valor_divida > 0)
     
     else
     {
-        let juros =(valor_divida / 100) * 10;
-        let valor_total_juros = Number(valor_divida) + Number(juros);
+        let juros =(valor_divida / 100) * 10; //Cáculo de juros com taxa de 10%
+        let valor_total_juros = Number(valor_divida) + Number(juros); //Valor total da dívida com os juros
 
         console.log("\nValor original da dívida: " + valor_divida);
         console.log("Dias atrasados: " + dias_atraso);
