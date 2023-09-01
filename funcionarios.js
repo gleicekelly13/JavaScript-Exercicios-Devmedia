@@ -13,6 +13,7 @@ while(contador < funcionarios.length) {
 
     let funcionario = funcionarios[contador];
 
+    //Se um funcionário tiver a propriedade 'habilitado' com valor true, o loop será interrompido pelo comando break.
     if(funcionario.habilitado == true) {
         console.log("Funcionário habilitado encontrado: " + funcionario.nome);
         encontrouHabilitado = true;
