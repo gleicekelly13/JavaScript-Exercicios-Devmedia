@@ -9,3 +9,12 @@ console.log(status);
 var mensagem = (mes == 11 || mes == 12) ? "Promoção" : "Preço normal";
 
 console.log(mensagem); */
+
+//-------------------------------------------------------
+/*if(nota > 7) {
+    status = "Aprovado";
+} else {
+    status = "Reprovado";
+}
+
+console.log(status); */
