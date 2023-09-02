@@ -5,3 +5,14 @@ let dia_semana = 0;
 let status_loja = (dia_semana == 0 || dia_semana == 6) ? "Funcionamos apenas de Segunda à Sexta" : "Loja aberta";
 
 console.log(status_loja); // Imprime o resultado no console
+
+//---------------------------------------------------
+/*
+let mes = " 12";
+
+if(mes == 11 || mes == 12) {
+    console.log("Promoção!");
+} else {
+    console.log("Preço normal");
+}
+*/
