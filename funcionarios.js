@@ -17,7 +17,7 @@ while(contador < funcionarios.length) {
     if(funcionario.habilitado == true) {
         console.log("Funcionário habilitado encontrado: " + funcionario.nome);
         encontrouHabilitado = true;
-        break;
+        break; //Caso seja executado, interrompe todo o laço de repetição.
     }
 
     contador++;
