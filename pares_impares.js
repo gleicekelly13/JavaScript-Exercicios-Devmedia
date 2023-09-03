@@ -5,7 +5,7 @@ let total_pares = 0;
 
 let contador = 0;
 
-while(contador < numeros.length) { //A cada execução do bloco será incrementado o total de números ímpares ou pares
+while(contador < numeros.length) { //A cada execução do bloco será incrementado o total de números ímpares ou pares.O loop será executado até que o `contador` seja igual ao comprimento do array `numeros`
     
     if(numeros[contador] % 2 == 0) {
         total_pares++;
