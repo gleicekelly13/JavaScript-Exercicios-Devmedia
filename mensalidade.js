@@ -14,3 +14,5 @@ do {
 
     contador++;
 } while (contador < total_dias);
+
+//Para calcular o novo valor da mensalidade foram utilizados os dias de atraso e o valor da multa
