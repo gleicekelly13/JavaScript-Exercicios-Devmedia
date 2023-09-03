@@ -17,6 +17,8 @@ if(media >= 6 ) {
     console.log("Reprovado");
 } */
 
+//O código percorre o array de notas para obter o somatório delas
+
 //---------------------------------------------------
 //FOR...OF
 let total_notas = notas_trimestrais.length;
