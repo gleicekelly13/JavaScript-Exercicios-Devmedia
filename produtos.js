@@ -31,3 +31,7 @@ for(let contador = 0; contador < produtos.length; contador++) { //Percorre todos
 /*
 -id, nome e preco são propriedades.
 -A variável propriedade armazena o nome de cada propriedade à medida que o loop itera.
+-Resumindo, o código pretende percorrer a matriz produtos, 
+aplicar um desconto de 5 unidades ao preço de cada produto e exibir os detalhes de cada produto, 
+incluindo o preço atualizado.
+*/
