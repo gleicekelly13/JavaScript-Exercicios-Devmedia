@@ -27,3 +27,5 @@ for(let contador = 0; contador < produtos.length; contador++) {
     }
     console.log("\n");
 }
+
+//id, nome e preco são propriedades.
