@@ -13,11 +13,11 @@ for(let contador = 0; contador < produtos.length; contador++) { //Percorre todos
 
     for(let propriedade in produto) { //itera sobre as propriedades do objeto produto.
         
-        if (propriedade == "preco") {
+        if (propriedade == "preco") { //Verifica se a propriedade atual é igual a "preco". Permite idente identificar a propriedade que representa o preço do produto
             
-            let preco = propriedade;
+            let preco = propriedade; //Extrai o valor do preço
 
-            let novo_preco = produto[preco] - desconto;
+            let novo_preco = produto[preco] - desconto; //Cálculo do novo preço com desconto
 
             console.log("Preço atualizado: R$" + novo_preco + ",00");
         
@@ -28,4 +28,6 @@ for(let contador = 0; contador < produtos.length; contador++) { //Percorre todos
     console.log("\n");
 }
 
-//id, nome e preco são propriedades.
+/*
+-id, nome e preco são propriedades.
+-A variável propriedade armazena o nome de cada propriedade à medida que o loop itera.
