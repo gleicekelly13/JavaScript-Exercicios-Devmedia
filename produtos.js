@@ -7,11 +7,11 @@ let produtos = [
 
 let desconto = 5;
 
-for(let contador = 0; contador < produtos.length; contador++) {
+for(let contador = 0; contador < produtos.length; contador++) { //Percorre todos os elementos do array, contador é uma variável usada como índice.
     
-    let produto = produtos[contador]; 
+    let produto = produtos[contador]; //Acessa o produto atual
 
-    for(let propriedade in produto) {
+    for(let propriedade in produto) { //itera sobre as propriedades do objeto produto.
         
         if (propriedade == "preco") {
             
