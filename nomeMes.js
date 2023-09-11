@@ -39,6 +39,9 @@ function retorna_mes (mes) {
         case 12:
             nome = 'Dezembro';
             break;
+        default:
+            nome = 'Mês inválido';
+            break;
     }
 
     return nome;
