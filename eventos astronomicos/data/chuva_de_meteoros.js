@@ -1,4 +1,4 @@
-const chuvas_meteoros = [
+const chuvas_meteoros = [ //Coleção de dados
     {
         nome: 'Alfa Centaurídeos',
         inicio: '01/28',
