@@ -1,7 +1,9 @@
 function verificaChuvaHoje(chuva, data_atual) { //Verifica se a chuva recebida por parâmetro está visível baseado na data recebida. Retorna true ou false
 
-    const ano_atual = data_atual.getFullYear();
+    const ano_atual = data_atual.getFullYear(); //Obtém o ano da data atual
 
+    /*Essas linhas criam novas datas com base nas datas de início e fim da chuva passadas como parte do objeto `chuva` 
+    e utilizando o ano atual obtido anteriormente*/
     const inicioChuva = new Date(chuva.inicio + '/' + ano_atual);
     const fimChuva = new Date(chuva.fim + '/' + ano_atual);
 
