@@ -26,3 +26,11 @@ if(chuvasVisiveisHoje.length > 0) {
 console.log('\n\nNão perca as próximas chuvas de meteoros: ');
 imprimeListaDeChuvas(chuvaVisiveisProximos2Meses);  
 
+
+/*
+*A aplicação contém todos os dados das chuvas de meteoros, para que possa gerar as listas.
+*A aplicação exibe uma lista com as chuvas que podem ser vistas hoje.
+*Caso não tenha chuvas para serem vistas hoje, uma mensagem definida pelo cliente é impressa.
+*A aplicação exibe outra lista com as chuvas que poderão ser vistas nos próximos 2 meses.
+*Os dados exibidos em cada lista são: nome, intensidade, hemisfério e período em que ela vai passar.
+*/
