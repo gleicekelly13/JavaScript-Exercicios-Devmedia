@@ -13,7 +13,7 @@ function verificaChuvaHoje(chuva, data_atual) { //Verifica se a chuva recebida p
         fimChuva.setFullYear(anoFinal + 1); //Aumenta o ano de `fimChuva` em 1.
     }
 
-    return data_atual >= inicioChuva && data_atual <= fimChuva; //return boolean; retorna `true` se a data estiver dentro 
+    return data_atual >= inicioChuva && data_atual <= fimChuva; /*return boolean; retorna `true` se a data estiver dentro 
     do intervalo entre `inicioChuva` e `fimChuva`. Verifica se a chuva está prevista para o dia atual.*/
 };
 
