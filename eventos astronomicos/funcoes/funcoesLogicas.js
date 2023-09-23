@@ -7,12 +7,14 @@ function verificaChuvaHoje(chuva, data_atual) { //Verifica se a chuva recebida p
     const inicioChuva = new Date(chuva.inicio + '/' + ano_atual);
     const fimChuva = new Date(chuva.fim + '/' + ano_atual);
 
-    if(inicioChuva.getMonth() + 1 > fimChuva.getMonth() + 1) {
-        const anoFinal = fimChuva.getFullYear();
-        fimChuva.setFullYear(anoFinal + 1);
+    if(inicioChuva.getMonth() + 1 > fimChuva.getMonth() + 1) { /*Verifica se o mês de início da chuva é maior do que o mês 
+    de fim da chuva...*/
+        const anoFinal = fimChuva.getFullYear(); //...Se isso acontecer, significa que a chuva ocorrerá no próximo ano.
+        fimChuva.setFullYear(anoFinal + 1); //Aumenta o ano de `fimChuva` em 1.
     }
 
-    return data_atual >= inicioChuva && data_atual <= fimChuva; //return boolean
+    return data_atual >= inicioChuva && data_atual <= fimChuva; //return boolean; retorna `true` se a data estiver dentro 
+    do intervalo entre `inicioChuva` e `fimChuva`. Verifica se a chuva está prevista para o dia atual.*/
 };
 
 
