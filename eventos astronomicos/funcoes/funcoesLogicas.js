@@ -71,3 +71,19 @@ const retornaHemisferio = (declinacao) => declinacao >= 0 ? 'Norte' : 'Sul'; //R
 
 export {verificaChuvaHoje, verificaChuvasFuturas, inverteMesAno, retornaIntensidade, retornaHemisferio};
 
+
+
+/*
+*Na função que formata intensidade, a estrutura condicional é usada para determinar a intensidade da chuva com base 
+na string `intensidade` fornecida com entrada
+
+*A função que formata o hemisfério recebe como parâmetro um valor numérico, seja ele positivo ou negativo e 
+retorna o hemisfério Norte ou Sul
+
+*Esse valor numérico que é recebido no parâmetro representa a declinação da chuva de meteoro
+
+*Na função que formata a data, a string que é recebida no parâmetro que representa a data de início ou a data de fim da chuva. 
+O parâmetro `data`, é uma string representando uma data no formato "mês/dia".
+
+*`dataInvertida[1]` representa o dia, `dataInvertida[0]` representa o mês
+*/
