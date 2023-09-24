@@ -20,19 +20,22 @@ function verificaChuvaHoje(chuva, data_atual) { //Verifica se a chuva recebida p
 
 
 function verificaChuvasFuturas(chuva, data) { //Verifica se a chuva recebida por parâmetro estará visível nos próximos 2 meses baseados na data recebida
-    const data_atual = data;
-    const ano_atual = data_atual.getFullYear();
+    const data_atual = data; //Copia a data passada como parâmetro para `data_atual`
+    const ano_atual = data_atual.getFullYear(); //Obtém o ano atual
     const inicioChuva = new Date(chuva.inicio + '/' + ano_atual);
     const fimChuva = new Date(data_atual);
 
-    if(data_atual.getMonth() + 1 > inicioChuva.getMonth() +1) {
+    if(data_atual.getMonth() + 1 > inicioChuva.getMonth() +1) {  //Semelhante à primeira função
         const anoFinal = inicioChuva.getFullYear();
         inicioChuva.setFullYear(anoFinal + 1);
     }
 
-    fimChuva.setMonth(fimChuva.getMonth() + 2);
+    fimChuva.setMonth(fimChuva.getMonth() + 2); /*Aumenta o mês de `fimChuva` em 2, significa que verifica se a chuva 
+    ocorrerá nos próximos 2 meses a partir da ``data_atual` */
 
-    return( data_atual < inicioChuva && inicioChuva < fimChuva);
+    return( data_atual < inicioChuva && inicioChuva < fimChuva); /*retorna `true` se `data_atual` for menor do 
+    que `inicioChuva` e `inicioChuva` for menor do que `fimChuva`, verifica se a chuva está prevista 
+    para os próximos 2 mesesa partir da `data_atual` */
     
 };
 
