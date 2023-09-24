@@ -9,19 +9,20 @@ function imprimeListaDeChuvas(lista) {  //Recebe uma lista de chuvas de meteoros
     e chama a função que formata para imprimir cada item da lista */
 }
 
+//Função que imprime um item da lista
+function imprimeChuva (chuva) {  /Recebe uma chuva como parâmetro, e imprime os datelhes da chuva de meteoros
+    const nome = chuva.nome.padEnd(27, ' ');  //Contém o nome da chuva formatado
+    let intensidade = retornaIntensidade(chuva.intensidade);  //Obtém a intensidade formatada da chuva
+    let hemisferio = retornaHemisferio(chuva.declinacao);  //Obtém o hemisfério formatado com base na declinação da chuva de meteoros.
 
-function imprimeChuva (chuva) {
-    const nome = chuva.nome.padEnd(27, ' ');
-    let intensidade = retornaIntensidade(chuva.intensidade);
-    let hemisferio = retornaHemisferio(chuva.declinacao);
-
-    intensidade = intensidade.padEnd(11, ' ');
+    intensidade = intensidade.padEnd(11, ' ');  /*Utilizando padEnd para ter uma determinada quantidade de caracteres, 
+    preenchendo com espaços em branco. */
     hemisferio = hemisferio.padEnd(10, ' ');
 
-    const inicioChuva = inverteMesAno(chuva.inicio);
+    const inicioChuva = inverteMesAno(chuva.inicio); //`inverteMesAno` é chamada para inverter o mês e o dia da data de início da chuva.
     const fimChuva = inverteMesAno(chuva.fim);
 
-    console.log(`${nome} - ${intensidade} - ${hemisferio} - ${inicioChuva} à ${fimChuva}`);
+    console.log(`${nome} - ${intensidade} - ${hemisferio} - ${inicioChuva} à ${fimChuva}`); //Imprime os dados formatados
 }
 
 export default imprimeListaDeChuvas;
