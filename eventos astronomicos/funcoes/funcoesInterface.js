@@ -26,3 +26,14 @@ function imprimeChuva (chuva) {  /Recebe uma chuva como parâmetro, e imprime os
 }
 
 export default imprimeListaDeChuvas;
+
+
+/*
+*As funções para exibir os dados das chuvas têm como finalidades exibir os dados formatados no terminal
+
+*function imprimeChuva, tem o objetivo de chamar as funções que formatam os dados e depois impimí-los no terminal.
+ Utiliza as funções de formatação que já foram criadas.
+
+*function imprimeListaDeChuvas, imprime uma tabela com a lista de chuvas (paramêtro: array)
+
+*/
