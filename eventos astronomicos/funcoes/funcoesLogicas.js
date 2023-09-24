@@ -48,18 +48,22 @@ function inverteMesAno (data) { //Inverte o mês e o dia de uma data que não po
     a data no formato "dia/mês". */
 }
 
-function retornaIntensidade (intensidade) {
-    let novaIntensidade = '1 (Fraca)';
+function retornaIntensidade (intensidade) { /*Formata a intensidade, recebe como parâmetro uma string 
+que descreve a intensidade da chuva...  */
+    let novaIntensidade = '1 (Fraca)';  //...e retorna a intensidade da chuva formatada
 
+    //Verifica com qual termo o parâmetro recebido inicia. Dependendo de qual for, devemos definir o valor que será retornado pela função
     if(intensidade.indexOf('Forte') >= 0) {
-        novaIntensidade = '3 (Forte)';
+        novaIntensidade = '3 (Forte)'; /*Se a string `intensidade` contém "Forte" em 
+        algum lugar (indicado pelo `indexOf('Forte') >= 0`), a variável `novaIntensidade` é definida como "3 (Forte)". */
     } else if (intensidade.indexOf('Média') >= 0) {
         novaIntensidade = '2 (Média)';
     } else if ( intensidade.indexOf('Irregular') >= 0) {
         novaIntensidade = '(Irregular)';
     }
 
-    return novaIntensidade;
+    return novaIntensidade; *a função retorna a intensidade da chuva formatada de acordo com os 
+    critérios estabelecidos na estrutura condicional. */
 }
 
 
