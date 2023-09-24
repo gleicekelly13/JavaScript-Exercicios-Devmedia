@@ -39,11 +39,13 @@ function verificaChuvasFuturas(chuva, data) { //Verifica se a chuva recebida por
     
 };
 
-
+//Funções que formatam os dados das chuvas
 function inverteMesAno (data) { //Inverte o mês e o dia de uma data que não possui ano definido
-    const dataInvertida = data.split('/');
+    const dataInvertida = data.split('/');  /*Para inverter a string recebida no parâmetro, primeiro deve dividí-la em duas partes, 
+    utilizando `split`, e em seguida, trocar as posições dessas partes, invertendo-as. */
 
-    return dataInvertida[1] + '/' + dataInvertida[0];
+    return dataInvertida[1] + '/' + dataInvertida[0];  /*O retorno da função é a data invertida, o resultado final é 
+    a data no formato "dia/mês". */
 }
 
 function retornaIntensidade (intensidade) {
