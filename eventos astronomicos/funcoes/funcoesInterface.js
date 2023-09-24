@@ -1,9 +1,12 @@
 import {inverteMesAno, retornaHemisferio, retornaIntensidade} from "./funcoesLogicas.js"
 
-function imprimeListaDeChuvas(lista) {  //Imprime uma tabela com a lista de chuvas (paramêtro: array)
-    console.log ('\nNOME DA CHUVA                -iNTENSIDADE - HEMISFÉRIO - PERÍODO');
+//Função que imprime a lista
+function imprimeListaDeChuvas(lista) {  //Recebe uma lista de chuvas de meteoros como parâmetro
+    console.log ('\nNOME DA CHUVA                -iNTENSIDADE - HEMISFÉRIO - PERÍODO');  /*Primeiro, deve imprimir o cabeçalho da lista, 
+    identificando cada dado a ser impresso nela. */
 
-    lista.forEach(imprimeChuva);
+    lista.forEach(imprimeChuva);  /*Utiliza a função nativa para percorrer cada elemento da lista de chuvas que foi recebida no parâmetro, 
+    e chama a função que formata para imprimir cada item da lista */
 }
 
 
