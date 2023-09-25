@@ -2,7 +2,8 @@ import chuvas_meteoros from "./data/chuva_de_meteoros.js";
 import imprimeListaDeChuvas from "./funcoes/funcoesInterface.js";
 import { verificaChuvaHoje, verificaChuvasFuturas } from "./funcoes/funcoesLogicas.js";
 
-const data_atual = new Date(); // Forma correta de declarar a data manualmente no JS, é usando o padrão americano e entre aspas: '2023-03-25'(ano-mês-dia).
+const data_atual = new Date(); /* Forma correta de declarar a data manualmente no JS, 
+é usando o padrão americano e entre aspas: '2023-03-25'(ano-mês-dia). */
 
 const chuvasVisiveisHoje = chuvas_meteoros.filter((chuva) => verificaChuvaHoje(chuva, data_atual));
 
