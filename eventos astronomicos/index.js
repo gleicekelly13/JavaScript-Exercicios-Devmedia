@@ -37,4 +37,9 @@ imprimeListaDeChuvas(chuvaVisiveisProximos2Meses);  //Utilizando a função para
 *Caso não tenha chuvas para serem vistas hoje, uma mensagem definida pelo cliente é impressa.
 *A aplicação exibe outra lista com as chuvas que poderão ser vistas nos próximos 2 meses.
 *Os dados exibidos em cada lista são: nome, intensidade, hemisfério e período em que ela vai passar.
+*Para cada um dos filtros é necessário percorrer a coleção de chuvas e utilizar uma função que verifica se a chuva iterada passa em um determinado período.
+*As funções recebem a chuva que esta sendo iterada e a data atual para verificar se o evento vai ocorrer dentro do período especificado
+*Cada lista criada é armazenada em sua respectiva variável.
+*No filter passamos uma função nativa que verifica se as datas da chuva estão dentro do período determinado
+*chuvasVisiveisHoje.length -> número de chuvas
 */
