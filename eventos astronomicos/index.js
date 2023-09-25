@@ -5,16 +5,19 @@ import { verificaChuvaHoje, verificaChuvasFuturas } from "./funcoes/funcoesLogic
 const data_atual = new Date(); /* Forma correta de declarar a data manualmente no JS, 
 é usando o padrão americano e entre aspas: '2023-03-25'(ano-mês-dia). */
 
-const chuvasVisiveisHoje = chuvas_meteoros.filter((chuva) => verificaChuvaHoje(chuva, data_atual));
+const chuvasVisiveisHoje = chuvas_meteoros.filter((chuva) => verificaChuvaHoje(chuva, data_atual));  /*2 informações importantes passadas 
+como parâmetros: coleção de chuvas e data atual. O método itera sobre a lista `chuvas_meteoros` e 
+verifica se cada chuva é visível hoje com a função `verificaChuvaHoje` */
 
 const chuvaVisiveisProximos2Meses = chuvas_meteoros.filter((chuva) => verificaChuvasFuturas(chuva, data_atual));
 
 console.log('Chuva de Meteoros');
 
 
-if(chuvasVisiveisHoje.length > 0) {
-    let msg = "\nEncontramos ";
+if(chuvasVisiveisHoje.length > 0) {  //Condição para verificar se existem chuvas na lista
+    let msg = "\nEncontramos ";  //Variável que armazena uma parte da mensagem que será exibida
     msg += chuvasVisiveisHoje.length == 1 ? 'chuva de meteoros que podem ser vista hoje' : chuvasVisiveisHoje.length + ' chuvas de meteoros que podem ser vistas hoje';
+    // Adiciona à variável `msg` a parte da mensagem que depende da quantidade de chuvas de meteoros visíveis hoje.
 
     console.log(msg)
 
