@@ -21,14 +21,14 @@ if(chuvasVisiveisHoje.length > 0) {  //Condição para verificar se existem chuv
 
     console.log(msg)
 
-    imprimeListaDeChuvas(chuvasVisiveisHoje);
+    imprimeListaDeChuvas(chuvasVisiveisHoje); // Utilizando a função para imprimir a lista de chuvas que podem ser vistas hoje.
 
 } else {
     console.log('\nNão há chuvas passando hoje');
 } 
 
 console.log('\n\nNão perca as próximas chuvas de meteoros: ');
-imprimeListaDeChuvas(chuvaVisiveisProximos2Meses);  
+imprimeListaDeChuvas(chuvaVisiveisProximos2Meses);  //Utilizando a função para imprimir a lista de chuvas que podem ser vistas nos próximos 2 meses.
 
 
 /*
