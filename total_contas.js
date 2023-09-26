@@ -17,3 +17,8 @@ for(let i = 0; i < contas.length; i++){
 }
 
 console.log(totalAPagar);
+
+
+/*
+*O método getTime compara o timestamp da data atual com o do vencimento e imprime o valor total de contas vencidas.
+*/
