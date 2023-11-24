@@ -64,3 +64,33 @@ const questoes = [
     console.log(`Pontuação: ${pontuacaoFinal}`);
     console.log(mensagem);
   }
+
+function iniciarQuiz() {
+    console.log('--------QUIZ DE FATOS HISTÓRICOS--------');
+    console.log('\nSeja Bem-vindo jogador(a)!');
+  
+
+  const nomeJogador = entradaDados.question("Digite o seu nome: ");
+  const quantidadePerguntas =10;
+
+  const perguntasSelecionadas = selecionarPerguntasAleatorias(questoes, quantidadePerguntas);
+
+  let pontuacaoFinal = 0;
+
+  perguntasSelecionadas.forEach((pergunta, index) => {
+    const respostaUsuario = exibirPergunta(pergunta, index);
+    const resultadoValidacao = validaRespostaUsuario(respostaUsuario, pergunta);
+
+    if (resultadoValidacao) {
+      console.log("Resposta correta!");
+      pontuacaoFinal++
+    } else {
+      console.log("Resposta errada!");
+    }
+  });
+
+  exibirResultado(pontuacaoFinal, nomeJogador);
+
+}
+
+iniciarQuiz();
